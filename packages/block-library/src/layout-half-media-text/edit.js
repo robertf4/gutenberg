@@ -90,13 +90,6 @@ class ImageEdit extends Component {
 		} ];
 		return (
 			<Fragment>
-				<div className={ className } style={ style } >
-					{ this.renderMediaArea() }
-					<InnerBlocks
-						allowedBlocks={ ALLOWED_BLOCKS }
-						template={ TEMPLATE }
-					/>
-				</div>
 				<InspectorControls>
 					<PanelColorSettings
 						title={ __( 'Color Settings' ) }
@@ -119,6 +112,13 @@ class ImageEdit extends Component {
 						} ] }
 					/>
 				</BlockControls>
+				<div className={ className } style={ style } >
+					{ this.renderMediaArea() }
+					<InnerBlocks
+						allowedBlocks={ ALLOWED_BLOCKS }
+						template={ TEMPLATE }
+					/>
+				</div>
 			</Fragment>
 		);
 	}
